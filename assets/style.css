@@ -1,0 +1,157 @@
+/* BASE STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}  
+body {
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    background: #FFF4EE;
+    display: flex;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+
+/* ASIDE HEADER STYLES */
+.aside {
+    background: #FFE4D6;
+    padding-top: 127px ;
+    min-width: 160px;
+    min-height: 100vh;
+}
+.link {
+    width: 100%;
+    display: flex;
+    margin-bottom: 72px;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid transparent;
+}
+.link.active {
+    border-left: 3px solid #8964D7;
+}
+
+/* MAIN */
+main {
+    padding: 64px 100px;
+    width: 100%;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title {
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+}
+.categories a {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #CBB1A2;
+    margin-left: 48px;
+    transition: .3s;
+    position: relative;
+    cursor: pointer;
+}
+.categories a:first-child {
+    margin-left: 0;
+}
+.categories a.active:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    background-color: #6749A5;
+    height: 4px;
+    bottom: -12px;
+    right: 50%;
+    transform: translateX(50%);
+}
+.categories a.active, .categories a:hover {
+    color: #6749A5;
+}
+
+.card {
+    width: 100%;
+    position: relative;
+    height: 544px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 60px;
+    padding: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.backgound {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.sub-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+.span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 960px){
+    .aside {min-width: 100px}
+    main {padding: 80px 20px;}
+    .card {
+        margin-top: 36px;
+        height: 274px;
+    }
+}
+
+@media (max-width: 460px){
+    .aside {
+        min-width: 15%;
+        padding-top: 50px;
+    }
+    nav > a img {
+        width: 50%;
+    }
+    main {
+        padding-top: 40px;
+    }
+    .title {
+        font-size: 36px
+    }
+    .categories a {
+        font-size: 18px;
+        margin-left: 18px;
+    }
+    .categories a.active:after {
+        bottom: -3px;
+    }
+    .card {
+        padding: 22px;
+    }
+}
